@@ -34,7 +34,6 @@ public class BallController : MonoBehaviour
                 SceneManager.LoadScene(sceneName);
             }
         }
-        scoreText.text = score.ToString();
     }
 
     private void OnCollisionEnter(Collision other)
@@ -59,6 +58,7 @@ public class BallController : MonoBehaviour
             score += 5000;
             audioSource.PlayOneShot(audioClips[3]);
         }
+        scoreText.text = score.ToString();
     }
 
 }
